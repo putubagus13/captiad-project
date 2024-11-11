@@ -16,22 +16,22 @@ body {
 
 @layer base {
   h1 {
-    @apply text-6xl font-bold;
+    @apply text-3xl md:text-6xl font-bold;
   }
   h2 {
-    @apply text-5xl font-semibold;
+    @apply text-2xl md:text-5xl font-semibold;
   }
   h3 {
-    @apply text-4xl font-semibold;
+    @apply text-xl md:text-4xl font-semibold;
   }
   h4 {
-    @apply text-3xl font-medium;
+    @apply text-lg md:text-3xl font-medium;
   }
   h5 {
-    @apply text-2xl font-medium;
+    @apply md:text-2xl font-medium;
   }
   h6 {
-    @apply text-xl font-medium;
+    @apply md:text-xl font-medium;
   }
 }
 

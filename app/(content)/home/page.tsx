@@ -72,7 +72,7 @@ export default function Home() {
         }}
         initial="hidden"
         animate="show"
-        className="relative w-full h-dvh bg-background flex justify-center items-center"
+        className="relative w-full h-dvh bg-background flex justify-center pt-44 md:pt-0 md:items-center"
       >
         <img
           src="Hero.gif"
@@ -95,12 +95,12 @@ export default function Home() {
             <br />
             to reach addressable audiences at scale.
           </h4>
-          <div className="w-full flex justify-center gap-4 mt-10">
-            <button className="h-16 min-w-56 p-4 bg-foreground rounded-full text-primary text-xl font-semibold flex gap-1 items-center justify-center hover:opacity-50 transition-all duration-100">
+          <div className="w-full flex flex-col sm:flex-row justify-center gap-4 px-10 md:px-0 mt-10">
+            <button className="md:h-16 min-w-56 p-4 bg-foreground rounded-full text-primary md:text-xl font-semibold flex gap-1 items-center justify-center hover:opacity-50 transition-all duration-100">
               Get Started
               <ArrowRight size={25} />
             </button>
-            <button className="h-16 min-w-40 p-4 border-2 border-foreground rounded-full text-foreground text-xl font-semibold hover:bg-foreground hover:text-primary hover:opacity-50 transition-all duration-100">
+            <button className="md:h-16 min-w-40 p-4 border-2 border-foreground rounded-full text-foreground md:text-xl font-semibold hover:bg-foreground hover:text-primary hover:opacity-50 transition-all duration-100">
               Learn More
             </button>
           </div>
@@ -111,11 +111,11 @@ export default function Home() {
       <motion.section
         id="section-testimony"
         ref={sectionRefs.testimony}
-        className="relative w-full h-full overflow-hidden bg-background pt-40"
+        className="relative w-full h-[600px] lg:h-full overflow-hidden bg-background lg:pt-40"
       >
         {visibleSections.testimony && (
           <>
-            <div className="absolute z-10 left-10 top-60 w-full flex flex-col gap-10">
+            <div className="absolute z-10 left-[5%] lg:left-10 top-60 w-full flex flex-col gap-4 lg:gap-10">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -152,16 +152,16 @@ export default function Home() {
                 />
               </motion.div>
             </div>
-            <div className="relative h-full scale-100 overflow-hidden pl-96">
+            <div className="relative h-full scale-100 overflow-hidden lg:pl-96">
               <motion.img
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                src="macbook_pro 1.svg"
+                src="home-section-3.svg"
                 alt=""
                 className="z-0 w-full h-full object-fill"
               />
-              <div className="absolute bottom-0 w-full h-full bg-gradient-to-t from-background from-20%  to-transparent z-10"></div>
+              <div className="absolute bottom-0 w-full h-full bg-gradient-to-t from-background from-30% lg:from-20%  to-transparent z-10"></div>
             </div>
           </>
         )}
@@ -173,7 +173,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        className="w-full h-[380px] flex flex-col gap-10 my-20 items-center justify-center"
+        className="w-full h-[380px] flex flex-col gap-10 lg:my-20 items-center justify-center"
       >
         {visibleSections.brand && (
           <>
@@ -181,7 +181,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-              className="w-full text-center"
+              className="w-full text-center px-[5%] md:px-0"
             >
               Trusted by Our Leading Brands
             </motion.h2>
@@ -298,7 +298,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="text-[24px]"
+                className="text-[14px] lg:text-[24px]"
               >
                 is your ultimate partner for dynamic advertising success. With
                 cutting-edge tools and expert media guidance, we handle daily ad
@@ -332,16 +332,16 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        className="relative h-[600px] w-full bg-background flex overflow-hidden"
+        className="relative h-[400px] md:h-[600px] w-full bg-background flex overflow-hidden"
       >
         {visibleSections.transform && (
           <>
-            <div className="z-10 w-full h-full flex items-center justify-center gap-10 p-20 text-foreground">
+            <div className="z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center gap-10 p-[5%] lg:p-20 text-foreground">
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="font-bold text-[92px] w-full"
+                className="font-bold text-[28px] md:text-[60px] lg:text-[92px] w-full"
               >
                 Transform How You Reach Your Audience
               </motion.h1>
@@ -349,7 +349,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="text-[24px] w-full h-full flex items-end"
+                className="text-[14px] md:text-[18px] lg:text-[24px] w-full h-full flex items-start lg:items-end"
               >
                 That’s why we offer tailored support to meet your unique needs.
                 Our team sails alongside you, exploring the uncharted waters of
@@ -374,10 +374,10 @@ export default function Home() {
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         ref={sectionRefs.form}
         id="form"
-        className="h-[851px] p-20 bg-foreground"
+        className="lg:h-[851px] p-[5%] lg:p-20 bg-foreground"
       >
         {visibleSections.form && (
-          <div className="h-full w-full flex bg-background rounded-3xl p-20 pb-0 text-foreground">
+          <div className="h-full w-full flex flex-col gap-4 lg:gap-0 lg:flex-row bg-background rounded-3xl p-[5%] lg:p-20 lg:pb-0 text-foreground">
             <div className="relative w-1/2 flex h-full flex-col justify-between">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
@@ -385,16 +385,18 @@ export default function Home() {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
                 className="z-0 w-full h-full flex flex-col gap-10"
               >
-                <h2 className="font-bold">
+                <h2 className="text-[24px] md:text-[60px] lg:font-5xl font-bold">
                   Ready to Explore <br /> Digital Ads Potential?
                 </h2>
-                <p className="text-[24px]">Get in touch with us today!</p>
+                <p className="text-[16px] lg:text-[24px]">
+                  Get in touch with us today!
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                className="z-0 w-full h-full"
+                className="hidden lg:block z-0 w-full h-full"
               >
                 <Image
                   width={462.63}
@@ -403,7 +405,7 @@ export default function Home() {
                   alt=""
                 />
               </motion.div>
-              <div className="absolute bottom-0 h-60 w-full bg-gradient-to-t from-background to-transparent"></div>
+              <div className="hidden lg:block absolute bottom-0 h-60 w-full bg-gradient-to-t from-background to-transparent"></div>
             </div>
             <form
               action=""
@@ -455,7 +457,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                className="h-16 max-w-56 p-4 bg-foreground rounded-full text-primary text-xl font-semibold flex gap-1 items-center justify-center hover:opacity-50 transition-all duration-100"
+                className="md:h-16 min-w-56 p-4 bg-foreground rounded-full text-primary md:text-xl font-semibold flex gap-1 items-center justify-center hover:opacity-50 transition-all duration-100"
               >
                 Let’s get started
                 <ArrowRight size={25} />
